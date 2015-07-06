@@ -100,9 +100,9 @@ Inputs raw data, output the zero position and scale of different axises. Each ca
   ...
 // In sensor event
   if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
-		c.inputRawData(DataType.TYPE_MAG, rawdata, timestamp);
-	}
-	...
+    c.inputRawData(DataType.TYPE_MAG, rawdata, timestamp);
+  }
+  ...
 // Usage:
   // Get zero point of the sensor
   double[] zero = c.getZero();
