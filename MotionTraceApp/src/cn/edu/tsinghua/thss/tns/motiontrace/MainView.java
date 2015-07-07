@@ -65,6 +65,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 		value = activity.values2;
 		canvas.drawLine(w, h, (float)(w+value[0]*20), (float)(h-value[1]*20), black);
 		canvas.drawText("X", (float)(w+value[0]*20), (float)(h-value[1]*20), black);
+		canvas.drawText("Direction: " + String.valueOf(Math.atan2(value[1], value[0]) / Math.PI * 180), 20, 300, black);
 
 		value = activity.values3;
 		canvas.drawLine(w, h, (float)(w+value[0]*20), (float)(h-value[1]*20), black);
@@ -76,7 +77,6 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 		//double r = Math.sqrt(value[0] * value[0] + value[1] * value[1] + value[2] * value[2]);
 
 		canvas.drawText("Steps: " + String.valueOf(activity.step), 20, 100, black);
-		//canvas.drawText(String.valueOf(r), 20, 200, black);
 		//canvas.drawText(String.valueOf(activity.stepTime), 20, 300, black);
 
 		//canvas.drawText(activity.dpc.getStateString(), 20, 400, black);
